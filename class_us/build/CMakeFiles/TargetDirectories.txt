@@ -1,0 +1,3 @@
+C:/Users/zxh/Desktop/C plus/class_us/build/CMakeFiles/rebuild_cache.dir
+C:/Users/zxh/Desktop/C plus/class_us/build/CMakeFiles/test.dir
+C:/Users/zxh/Desktop/C plus/class_us/build/CMakeFiles/edit_cache.dir

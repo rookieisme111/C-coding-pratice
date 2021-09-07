@@ -1,0 +1,30 @@
+
+
+首先把链表串成循环
+
+vector<listNode> head;  //把所有链表节点放进去
+vector<bool>  fail; //初始化为True,表示所有节点都没淘汰
+
+int cnt=链表节点数      //表示未淘汰节点数量
+int epoch=0;            //表示比较次数，如果达到一定次数，说明有多个节点为头节点都符合要求
+while(cnt!=1 && epoch!=节点数量){
+    min=很大的数
+    epoch++;
+    for (int i=0;i<链表节点数;i++){
+        if (fail[i]==True && head[i].val<min)
+            min=head[i].val;
+
+        for (int j=0;j<节点数；j++){
+            if (fail[i]==True && head[i].val!=min)
+                fail[i]=False;      //表示在该轮竞争中失败
+                cnt--;
+        }
+
+        for (int j=0;j<节点数；j++){
+            if(fail[i]==True)
+                head[i]=head[i].next;
+        }
+    }
+}
+
+最终fail中为True的索引都是符合要求的

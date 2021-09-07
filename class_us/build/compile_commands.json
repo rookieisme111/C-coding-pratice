@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/zxh/Desktop/C plus/class_us/build",
+  "command": "g++  @CMakeFiles/test.dir/includes_CXX.rsp -g -o CMakeFiles\\test.dir\\src\\stock1.cpp.obj -c \"C:\\Users\\zxh\\Desktop\\C plus\\class_us\\src\\stock1.cpp\"",
+  "file": "C:/Users/zxh/Desktop/C plus/class_us/src/stock1.cpp"
+},
+{
+  "directory": "C:/Users/zxh/Desktop/C plus/class_us/build",
+  "command": "g++  @CMakeFiles/test.dir/includes_CXX.rsp -g -o CMakeFiles\\test.dir\\src\\use_stock.cpp.obj -c \"C:\\Users\\zxh\\Desktop\\C plus\\class_us\\src\\use_stock.cpp\"",
+  "file": "C:/Users/zxh/Desktop/C plus/class_us/src/use_stock.cpp"
+}
+]
