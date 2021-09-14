@@ -2,13 +2,14 @@
 
 using namespace std;
 //本来应该是一个模板类，为了简单实现，用一个Int型的变量作为共享指针的管理的资源
+template<class T>
 class shared_ptr{
 private:
-    int* _ptr;
+    T* _ptr;
     size_t * _count;
 
 public:
-    shared_ptr(int * ptr=nullptr ):_ptr(ptr){
+    shared_ptr(T * ptr=nullptr ):_ptr(ptr){
         if (_ptr)
             _count = new size_t(1);
     }
@@ -45,18 +46,36 @@ public:
         return *this;
     }
 
+    T& operator*(){
+        // if (_ptr)
+        return *_ptr;
+    }
+
+    T* operator->(){
+        return _ptr;
+    }
+
     size_t print_count(){
         return *this->_count;
     }
 
 };
 
+struct A{
+    int var1;
+    long var2;
+    A(int a,int b):var1(a),var2(b){}
+};
+
 int main(){
-    shared_ptr p1(new int(10));
+    shared_ptr<struct A> ptr (new struct A(1,10));
+    cout << ptr->var2 << endl;
+    shared_ptr<int> p1(new int(10));
+    cout << *p1 << endl;
     cout << p1.print_count() << endl;
-    shared_ptr p2(p1);
+    shared_ptr<int> p2(p1);
     cout << p2.print_count() << endl;
-    shared_ptr p3;
+    shared_ptr<int> p3;
     p3 = p2;
     cout << p3.print_count() << endl;
     system("pause");
